@@ -40,16 +40,19 @@
   </head>
 
   <body>
-    <nav class="dropdown">
-      <div onclick="lightOn()" class="start-button dropbtn">
+    
+    <div onclick="lightOn()" class="start-button dropbtn collapsible">
         <div class="start-button-push dropbtn">
           <div id="light" class="start-button-light dropbtn"></div>
           <p class="start-button-text engine dropbtn">ENGINE</p>
           <p class="start-button-text start dropbtn">START</p>
           <p class="start-button-text stop dropbtn">STOP</p>
         </div>
-      </div>  
-        <div id="myDropdown" class="nav-list">
+      </div>
+
+      
+    <nav id="myDropdown" class="dropdown content">
+        <div class="nav-list">
           <a href="#" class="nav-items">MARCAS</a>
           <a href="#" class="nav-items">REVIEWS</a>
           <a href="#" class="nav-items">NOTICIAS</a>
@@ -57,6 +60,8 @@
           <a href="#" class="nav-items">GUIA DE COMPRA</a>
         </div>
     </nav>
+
+    <div id="jumbotron"></div>
 
 
 
@@ -70,28 +75,35 @@
   <script type="text/javascript">
     function lightOn() {
       var x = document.getElementById('light');
-      if (x.style.background !== 'orange') {
-          x.style.background = 'orange';
+      if (x.style.background !== 'gold') {
+          x.style.background = 'gold';
           document.getElementById("myDropdown").classList.toggle("show");
 
       } else {
           x.style.background = 'black';
           document.getElementById("myDropdown").classList.toggle("show");
 
-  }
-}
-  </script>
-  <!-- <script type="text/javascript">
-    function lightOn() {
-    var x = document.getElementById('light');
-    if (x.style.background === 'black') {
-        x.style.background = 'gold';
-    } else {
-        x.style.background = 'black';
+      }
     }
-    }
-  </script> -->
 
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+
+
+  </script>
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
