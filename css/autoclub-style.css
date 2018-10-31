@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-size:16px;
+  box-sizing: border-box;
 
 }
 html{
@@ -12,6 +13,7 @@ html{
 body{
   font-family: 'Poppins', sans-serif;
   background: #2D4046;
+  /*background: #6AC5F4;*/
   
 }
 
@@ -20,33 +22,49 @@ nav{
 }
 
 .nav-list{
+
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  width: 100%;
-  margin-top:10px;
+  flex-direction:row;
+  /*flex-wrap: wrap;*/
+  justify-content:space-around;
+  /*width: 100%;*/
+  /*margin-top:10px;*/
   /*background-color: pink;*/
+  margin: 25px 0 0 0;
+
  
 }
 .nav-items{
+  text-align:center;
+  width:220px;
+  padding:24px 0;
+
   color: white;
   text-decoration: none;
   font-size: 1.4em;
-  margin: 0 auto;
-  padding: 25px 0;
-  transition:0.3s;
-  width: 220px;
+  /*margin: 0 auto;*/
+  /*padding: 25px 0;*/
+  transition:0.5s;
+  /*width: 220px;*/
   font-weight: bold;
-  background:#B8CAD1;
-  margin-top:20px;
-  text-shadow:1px 1px 0px rgba(0,0,0,0.9);
+  /*background:#B8CAD1;*/
+  /*margin-top:20px;*/
+  text-shadow:1px 1px 0px rgba(0,0,0,0.9); 
+  background: #e60000;
+  border-top:5px solid #b30000;
+
 
 }
 .nav-items:hover{
-  margin-top:2px;
-  margin-bottom:16px;
+  /*margin-top:2px;
+  margin-bottom:16px;*/
+  transform:translateY(-20%);
   text-shadow:2px 2px 2px rgba(0,0,0,0.9);
   box-shadow: 0px 15px 16px -10px #111; 
+  border-bottom:5px solid #b30000;
+  border-top:none;
 }
 .nav-items:active{
   color: red;
@@ -58,14 +76,15 @@ nav{
   height:165px;
   display:flex;
   border-radius:82.5px;
-  margin: 15px auto 0 auto;
+  margin: 25px auto 0 auto;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-tap-highlight-color: transparent;
 }
 
 .start-button-push{
-  background: radial-gradient(ellipse at center, #ed213a, #93291e);
+  /*background: radial-gradient(ellipse at center, #ed213a, #93291e);*/
+  background: radial-gradient(ellipse at center, #ff0000, #cc0000);
   box-shadow: 0 0 10px black inset, 0px 0px 10px 0px rgba(0,0,0,0.75);
   width:150px;
   height:150px;
@@ -112,9 +131,149 @@ nav{
   margin-top:30px;
 } 
 
-.content {
-  /*padding:0;*/
+/*.content {
+  padding:0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease-out;
+}*/
+
+
+
+.slideshow{
+  width:100%;
+  position: relative;  
+  user-select: none;
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 5px 5px, 0px 0px;
+
+}
+.slide-image-wrap{
+  width:100%;
+  box-sizing: border-box;
+
+}
+.mySlides {
+  width: 100%;
+  overflow: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+#main-slide .slide-image-wrap .mySlides{
+  height:0;
+  padding-top: 56.25%;
+}
+
+#main-slide img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.slide-text-wrap{
+  padding: 40px 0;
+  width:500px;
+  background:rgba(0,0,0,0.5);
+  position: absolute;
+  bottom:20%;
+  right: 6%;
+  color:white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bolder;
+  font-size: 2em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(255,0,0,0.8);
+}
+.dot {
+  cursor: pointer;
+  height: 9px;
+  width: 27px;
+  margin: 0 10px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color:red;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+
+
+
+@media only screen and (orientation: portrait) {
+
+
+
+    
+}
+
+@media only screen and (max-width: 800px){
+  .slide-text-wrap{
+  background-color: #0d0d0d;
+  text-align: center;
+  top: initial;
+  left: initial;
+  right: initial;
+  bottom:initial;
+  width: 100%;
+  padding: 50px 0;
+  height: auto;
+
+}
+.dot {
+margin-top: 155px;
+}
+.nav-items{
+     flex:1 1 50%;
+  }
+}
+@media only screen and (max-width: 600px){
+.nav-items{
+     flex:1 1 100%;
+  }
+}
+
+
 }

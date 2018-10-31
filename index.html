@@ -39,75 +39,118 @@
     <meta property="twitter:account_id" content="880088813267189761" />
   </head>
 
-  <body>
+<body>
     
-    <div onclick="lightOn()" class="start-button dropbtn collapsible">
-        <div class="start-button-push dropbtn">
-          <div id="light" class="start-button-light dropbtn"></div>
-          <p class="start-button-text engine dropbtn">ENGINE</p>
-          <p class="start-button-text start dropbtn">START</p>
-          <p class="start-button-text stop dropbtn">STOP</p>
-        </div>
-      </div>
+<div onclick="lightOn()" class="start-button dropbtn collapsible">
+  <div class="start-button-push dropbtn">
+    <div id="light" class="start-button-light dropbtn"></div>
+      <p class="start-button-text engine dropbtn">ENGINE</p>
+      <p class="start-button-text start dropbtn">START</p>
+      <p class="start-button-text stop dropbtn">STOP</p>
+  </div>
+</div>
 
       
-    <nav id="myDropdown" class="dropdown content">
-        <div class="nav-list">
-          <a href="#" class="nav-items">MARCAS</a>
-          <a href="#" class="nav-items">REVIEWS</a>
-          <a href="#" class="nav-items">NOTICIAS</a>
-          <a href="#" class="nav-items">PREMIOS</a>
-          <a href="#" class="nav-items">GUIA DE COMPRA</a>
-        </div>
-    </nav>
+<nav id="myDropdown" class="dropdown">
+  <div class="nav-list">
+    <a href="#" class="nav-items">MARCAS</a>
+    <a href="#" class="nav-items">REVIEWS</a>
+    <a href="#" class="nav-items">NOTICIAS</a>
+    <a href="#" class="nav-items">PREMIOS</a>
+    <a href="#" class="nav-items">GUIA DE COMPRA</a>
+  </div>
+</nav>
 
-    <div id="jumbotron"></div>
+<div id="main-slide" class="slideshow">
+  <div class="slide-image-wrap">
+    <div class="mySlides fade">
+      <img src="https://bit.ly/2OfQTsg">
+      <div class="slide-text-wrap">Caption ONE</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="https://bit.ly/2DeaYht">
+      <div class="slide-text-wrap">Caption TWO</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="https://bit.ly/2P6IaKb">
+      <div class="slide-text-wrap">Caption THREE</div>
+    </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</div>
+<div  style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<div id="jumbotron"></div>
 
 
+<script type="text/javascript">
+  function lightOn() {
+    var x = document.getElementById('light');
+    if (x.style.background !== 'gold') {
+        x.style.background = 'gold';
+        document.getElementById("myDropdown").classList.toggle("show");
 
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    function lightOn() {
-      var x = document.getElementById('light');
-      if (x.style.background !== 'gold') {
-          x.style.background = 'gold';
-          document.getElementById("myDropdown").classList.toggle("show");
-
-      } else {
-          x.style.background = 'black';
-          document.getElementById("myDropdown").classList.toggle("show");
-
+    } else {
+        x.style.background = 'black';
+        document.getElementById("myDropdown").classList.toggle("show");
       }
     }
 
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } 
-      });
-    }
-
-
-  </script>
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+</script>
   
+<script type="text/javascript">
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
-  </body>
+</body>
+
 </html>
