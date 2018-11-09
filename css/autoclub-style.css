@@ -50,12 +50,14 @@ body{
   font-size: 1.3em;
   transition:0.5s;
   font-weight: bold;
+  border:4px outset #1a1a1a;
 }
 .nav-items:hover{
   background: rgba(0,0,0,0.3);
   box-shadow: inset 0px 0px 16px  #0d0d0d; 
-  border-top:none;
+  /*border-top:none;*/
   color: #FF0000;
+  border:4px inset #1a1a1a;
 }
 .nav-items:active{
   color: red;
