@@ -1,3 +1,4 @@
+/**h2 top 6px bottom 9px default*/
 *{
   color:#FFF;
   margin: 0;
@@ -14,57 +15,47 @@ body{
   font-family: 'Poppins', sans-serif;
   background: #2D4046;
   /*background: #6AC5F4;*/
-  
+
 }
 
-nav{
-    /*padding-top: 15px;*/
+:root {
+    --tit-sha: 2px 2px rgba(0, 0, 0, 0.5); 
 }
 
+ /*+++++++++++++++++++++++++++++++++Classes++++++++++++++++++++++++++++*/
+.slideshow .slide-image-wrap .mySlides a img{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
 .nav-list{
-
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   flex-direction:row;
-  /*flex-wrap: wrap;*/
   justify-content:space-around;
-  /*width: 100%;*/
-  /*margin-top:10px;*/
-  /*background-color: pink;*/
-  margin: 25px 0 0 0;
-
- 
+  margin-top: 25px;
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 5px 5px, 0px 0px;
 }
 .nav-items{
   text-align:center;
   width:220px;
-  padding:24px 0;
-
-  color: white;
+  padding:18px 0;
+  color:white;
   text-decoration: none;
-  font-size: 1.4em;
-  /*margin: 0 auto;*/
-  /*padding: 25px 0;*/
+  font-size: 1.3em;
   transition:0.5s;
-  /*width: 220px;*/
   font-weight: bold;
-  /*background:#B8CAD1;*/
-  /*margin-top:20px;*/
-  text-shadow:1px 1px 0px rgba(0,0,0,0.9); 
-  background: #e60000;
-  border-top:5px solid #b30000;
-
-
 }
 .nav-items:hover{
-  /*margin-top:2px;
-  margin-bottom:16px;*/
-  transform:translateY(-20%);
-  text-shadow:2px 2px 2px rgba(0,0,0,0.9);
-  box-shadow: 0px 15px 16px -10px #111; 
-  border-bottom:5px solid #b30000;
+  background: rgba(0,0,0,0.3);
+  box-shadow: inset 0px 0px 16px  #0d0d0d; 
   border-top:none;
+  color: #FF0000;
 }
 .nav-items:active{
   color: red;
@@ -76,14 +67,12 @@ nav{
   height:165px;
   display:flex;
   border-radius:82.5px;
-  margin: 25px auto 0 auto;
-
+  margin: 25px auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-tap-highlight-color: transparent;
 }
 
 .start-button-push{
-  /*background: radial-gradient(ellipse at center, #ed213a, #93291e);*/
   background: radial-gradient(ellipse at center, #ff0000, #cc0000);
   box-shadow: 0 0 10px black inset, 0px 0px 10px 0px rgba(0,0,0,0.75);
   width:150px;
@@ -96,7 +85,6 @@ nav{
 }
 .start-button-push:active {
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.8) inset, 0 2px 15px 0 rgba(0, 0, 0, 0.8) inset;
-  
 }
 .start-button-light{
   width:35px;
@@ -107,7 +95,6 @@ nav{
   border: inset 2px #bfbfbf;
   
 }
-
 .start-button-text{
   text-align:center;
   color:white;
@@ -124,22 +111,17 @@ nav{
   font-size:0.8em;
   margin-top:8px;
 }
- #jumbotron{
-  width:100%;
-  height:500px;
-  background:#1B3239;
-  margin-top:30px;
-} 
 
-/*.content {
+.car-choice-tittle{
+  font-size: 2em;
+  padding: 8px 0 0 15px;
+} 
+.content {
   padding:0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease-out;
-}*/
-
-
-
+}
 .slideshow{
   width:100%;
   position: relative;  
@@ -159,33 +141,15 @@ nav{
   width: 100%;
   overflow: hidden;
 }
-img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-}
-#main-slide .slide-image-wrap .mySlides{
-  height:0;
-  padding-top: 56.25%;
-}
-
-#main-slide img{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
 .slide-text-wrap{
-  padding: 40px 0;
-  width:500px;
-  background:rgba(0,0,0,0.5);
+  font-family: 'Coda', cursive;
+  padding: 40px 40px;
+  background:rgba(0,0,0,0.4);
   position: absolute;
   bottom:20%;
-  right: 6%;
+  right: 0%;
   color:white;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
 }
 
@@ -209,6 +173,14 @@ img {
 }
 .prev:hover, .next:hover {
   background-color: rgba(255,0,0,0.8);
+}
+.dot-container{
+  text-align: center;
+  padding: 5px 0;
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 5px 5px, 0px 0px;
 }
 .dot {
   cursor: pointer;
@@ -238,7 +210,152 @@ img {
   from {opacity: .2} 
   to {opacity: 1}
 }
+.year-hilight{
+  color:red;
+  font-size: 1em;
+}
+.last-reviews{
+  font-family: 'Coda', cursive;
+  background: #1B3239;
+  width: 100%;
+  padding-top: 29px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+.last-reviews-divs{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items: flex-end;
 
+}
+.last-reviews-divs a{
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.new-video-label{
+  margin-left: 10px;
+  color: #FFA500;
+  animation-name: flash;
+  animation: flash 3s  infinite;
+}
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+.thum-video-reviews{
+  background: #B8CAD1;
+  padding:10px 10px 1px 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.thum-video-reviews img{
+  border:1px solid #8c8c8c;
+  margin: 0 auto;
+  text-align: center;
+}
+.thum-video-reviews h2{
+  color:#1a1a1a;
+  font-size: 1.5em;
+}
+.last-reviews-tittle{
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); 
+  text-shadow: var(--tit-sha);
+}
+.car-brands{
+  background: #1B3239;
+  width: 100%;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.car-brands-container{
+  background: #1a1a1a;
+  /*height:160px;*/
+  overflow: auto;
+  white-space: nowrap;
+  margin-top: 12px;
+  cursor:grab;
+  user-select: none;
+}
+.car-brands-container a:first-child{
+  margin-left: 20px;
+}
+.car-brands-container a:last-child{
+  margin-right: 20px;
+}
+.car-brands-container a{
+  display: inline-block;
+  text-decoration: none;
+  width:128px;
+  height:160px;
+  margin: 0 15px;
+
+}
+.car-brands-container::-webkit-scrollbar {
+    height:8px;
+}
+.car-brands-container::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px grey; */
+}
+.car-brands-container::-webkit-scrollbar-thumb {
+    background: #cc0000;
+    border-radius: 5px;
+}
+.car-brands-container::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+}
+.car-logo{
+  
+}
+.all-brands-tittle{
+  font-family: 'Coda', cursive;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); 
+  text-shadow:var(--tit-sha);
+}
+/*++++++++++++++++++++++++++++++++++++ID'S+++++++++++++++++++++++++++++*/
+#car-choice{
+  width:100%;
+  height:500px;
+  background:#1B3239;
+  margin-top:30px;
+}
+#main-slide .slide-image-wrap .mySlides{
+  height:0;
+  padding-top: 56.25%;
+}
+#main-slide img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 
 
 
@@ -248,32 +365,73 @@ img {
 
     
 }
+@media only screen and (max-width: 1200px){
+.slide-text-wrap{
+padding: 10px 10px;
+bottom:0%;
+width: 100%; 
+}
 
+}
 @media only screen and (max-width: 800px){
-  .slide-text-wrap{
-  background-color: #0d0d0d;
-  text-align: center;
-  top: initial;
-  left: initial;
-  right: initial;
-  bottom:initial;
-  width: 100%;
-  padding: 50px 0;
-  height: auto;
+.slide-text-wrap{
+  font-size: 2.5em;
+}
 
-}
-.dot {
-margin-top: 155px;
-}
 .nav-items{
      flex:1 1 50%;
   }
 }
+
+
 @media only screen and (max-width: 600px){
+.slide-text-wrap{
+  font-size: 2em;
+}
 .nav-items{
      flex:1 1 100%;
   }
+.prev, .next {
+  top:10%;
 }
 
-
 }
+
+@media only screen and (max-width: 400px){
+.slide-text-wrap{
+  font-size: 1.5em;
+}  
+.last-reviews-divs{
+  flex-direction:column;
+}
+.last-reviews-divs a{
+  width: 100%;
+}
+.thum-video-reviews img{
+width: 100%;
+height: auto;
+}
+.prev, .next {
+  top:13%;
+}  
+}
+
+/*++++++++++++++SUPER SMALL RESOLUTIONS+++++++++++*/
+ @media only screen and (max-width: 240px){
+.last-reviews-tittle{
+  font-size: 18vw;
+}
+.all-brands-tittle{
+  font-size: 18vw;
+}
+.prev, .next {
+  top:19%;
+  padding: 5px;
+} 
+.slide-text-wrap{
+  font-size: 1.3em;
+}
+
+ }
+
+

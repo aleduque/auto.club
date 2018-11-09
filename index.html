@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
     <title>Auto Club</title>
-    <link rel="icon" href="img/favicon.ico" sizes="16x16">
+    <!-- <link rel="icon" href="img/favicon.ico" sizes="16x16"> -->
     <meta name="description" content="La mejor Web de reseñas sobre el mundo de los autos.">
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+    
     <!--jop-style-->
     <link rel="stylesheet" href="css/autoclub-style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Coda:800" rel="stylesheet">
     <!--FACEBOOK CARDS -->
     <meta property="og:site_name" content="Auto Club" />
     <meta property="og:title" content="Auto Club" />
@@ -51,7 +51,7 @@
 </div>
 
       
-<nav id="myDropdown" class="dropdown">
+<nav id="myDropdown" class="dropdown content">
   <div class="nav-list">
     <a href="#" class="nav-items">MARCAS</a>
     <a href="#" class="nav-items">REVIEWS</a>
@@ -64,28 +64,93 @@
 <div id="main-slide" class="slideshow">
   <div class="slide-image-wrap">
     <div class="mySlides fade">
-      <img src="https://bit.ly/2OfQTsg">
-      <div class="slide-text-wrap">Caption ONE</div>
+      <a href="#"><img src="https://bit.ly/2zwikbP"></a>
+      <div class="slide-text-wrap">Toyota 4Runner 2018 Review</div>
     </div>
     <div class="mySlides fade">
-      <img src="https://bit.ly/2DeaYht">
-      <div class="slide-text-wrap">Caption TWO</div>
+      <a href="#"><img src="https://bit.ly/2qtU2Lu"></a>
+      <div class="slide-text-wrap">Nuevo Honda Civic 2019 AutoShow Detroit</div>
     </div>
     <div class="mySlides fade">
-      <img src="https://bit.ly/2P6IaKb">
-      <div class="slide-text-wrap">Caption THREE</div>
+      <a href="#"><img src="https://bit.ly/2yTNLx4"></a>
+      <div class="slide-text-wrap">Nissan GTR Nismo Gotzilla con ruedas</div>
     </div>
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 </div>
-<div  style="text-align:center">
+<div class="dot-container">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
-<div id="jumbotron"></div>
+<section class="last-reviews">
+  <h2 class="last-reviews-tittle">ULTIMOS REVIEWS</h2>
+  <section class="last-reviews-divs">
+    <a href="#">
+        <span class="new-video-label">Nuevo</span>
+        <article class="thum-video-reviews">
+          <img src="img/nissan-altima-2019.jpg">
+          <h2>Nissan Altima <span class="year-hilight">2019</span></h2>
+        </article>
+    </a>
+    <a href="#">  
+      <article class="thum-video-reviews">
+        <img src="img/mazda-cx5-2017.jpg">
+        <h2>Mazda CX5 <span class="year-hilight">2017</span></h2>
+      </article>
+    </a>
+    <a href="#">  
+      <article class="thum-video-reviews">
+        <img src="img/hyundai-santafe-2018.jpg">
+        <h2>Hyundai Santa Fe <span class="year-hilight">2018</span></h2>
+      </article>
+    </a>
+  </section>
+</section>
+
+
+<section class="car-brands">
+  <h2 class="all-brands-tittle">TODAS LAS MARCAS</h2>
+  <div class="car-brands-container">
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+    <a href="#" class="car-logo"><img src="img/wolks.png" width="128px" height="160px"></a>
+
+  </div>
+</section>
+
+
+<section id="car-choice">
+  <h2 class="car-choice-tittle">Top 5 los mejores Vehiculos en su catergoria</h2>
+  <article>
+    <select class="makes">
+      <option value="marca">Marcas</option>
+        <option value="Acura" data-slug="acura">Acura</option>
+        <option value="Alfa Romeo" data-slug="alfa-romeo">Alfa Romeo</option>
+        <option value="Aston Martin" data-slug="aston-martin">Aston Martin</option>
+    </select>
+  </article>
+</section>
+
+
+
+
+
+
+
 
 
 <script type="text/javascript">
