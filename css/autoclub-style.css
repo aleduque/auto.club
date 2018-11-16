@@ -15,6 +15,7 @@ body{
   font-family: 'Poppins', sans-serif;
   background: #2D4046;
   /*background: #6AC5F4;*/
+  /*background: #0e0e0e;*/   /*el gris obscuro*/
 
 }
 
@@ -312,7 +313,7 @@ body{
 .car-brands-container a{
   display: inline-block;
   text-decoration: none;
-  width:128px;
+  width:120px;
   height:160px;
   margin: 0 15px;
 
@@ -331,6 +332,8 @@ body{
     background: #ff0000;
 }
 .car-logo{
+  width: 120px;
+  height: 160px;
   
 }
 .all-brands-tittle{
@@ -340,6 +343,21 @@ body{
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5); 
   text-shadow:var(--tit-sha);
 }
+.best-tittle{
+  font-family: 'Coda', cursive;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); 
+  text-shadow:var(--tit-sha); 
+}
+.best-container{
+  background: #1B3239;  
+  width: 100%;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
 /*++++++++++++++++++++++++++++++++++++ID'S+++++++++++++++++++++++++++++*/
 #car-choice{
   width:100%;
